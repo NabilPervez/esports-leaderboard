@@ -1,0 +1,22 @@
+{
+  "name": "esports-leaderboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NabilPervez/esports-leaderboard.git"
+  },
+  "author": "Nabil Pervez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NabilPervez/esports-leaderboard/issues"
+  },
+  "homepage": "https://github.com/NabilPervez/esports-leaderboard#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
