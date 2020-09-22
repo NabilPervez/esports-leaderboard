@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 
     <!-- Additional CSS -->
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" >
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-
-    <title>Esports Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <title>Esports Weekly Digest</title>
 </head>
 <body>
-<!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <header>
+      <!--Navbar-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <a class="navbar-brand" href="#"><img src="http://nabilpervez.com/wp-content/uploads/2020/02/N.png" width=5%></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
@@ -36,45 +40,43 @@
             <li class="nav-item">
                 <a class="nav-link" href="author.html">Author</a>
               </li>
-          </ul>
+            </ul>
         </div>
-    </nav>
-
-    <!--Header-->
-    <header>
-        <div class="jumbotron" id="weekly-summary">
-            <h1 class="text-center">Esports Twitter Engagement Leaderboards</h1>
-        </div>
+        </nav>
     </header>
 
-    <!--Graph-->
-    <div class="container py-4">
-      <div class="row">
-        <canvas class="chartjs-render-monitor col-6" id="timeline" width="300" height="100" style="display: width: 300px; height: 100px;"></canvas>
-        <canvas class="chartjs-render-monitor col-6" id="comparison" width="300" height="100" style="display: width: 300px; height: 100px;"></canvas>
-      </div>
+    <div class="jumbotron" >
+      <h1 class="text-center align-center"><br><br>Esports Weekly Digest</h1>
+    </div>
+
+    <!--Graphs-->
+    <div class="container my-5 charts" id="weekly-summary">
+      <h2>Most Retweeted Teams</h2>
+     <!--   <canvas class="chartjs-render-monitor col-6" id="timeline" width="300" height="100" style="display: width: 300px; height: 100px;"></canvas> -->
+        <canvas class="chartjs-render-monitor" id="comparison" width="300" height="100" style="display: width: 300px; height: 100px;"></canvas>
     </div>
     
-
-    <!--4 Cards With Highlight Numbers-->
+    <!--3 Cards With Highlight Numbers-->
     <!--1st Row-->
     <div class="container" id="popular-tweets">
-    <h2 class="text-center">Popular Tweets This Week</h2>
+    <h2 class="text-center">Popular Tweets</h2>
     <div class="row">
         <div class="col-md-4">
           <div class="card mb-4 box-shadow">
 
             <!-- Card title (C9)-->
+            <div id="teamHeader">
             <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1297597754928177152/LhF3izar_400x400.jpg" width="50" height="50" alt="c9 logo"/>
             <span><b>Cloud9</b></span>
             <span><em>@Cloud9</em></span>
+            </div>
 
             <a href="https://twitter.com/Cloud9/status/1306730939528040448" target="_blank">
             <img class="card-img-top" src="https://pbs.twimg.com/media/EiJwwKCUYAA2tI5?format=jpg&name=small"  alt="c9 fall collection">
             </a>
               <div class="card-body">
                 <p class="card-text">Couldn't purchase your RTX 3080? Worry not. Use your unspent money below http://c9.gg/store</p>
-                  <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex justify-content-between align-items-center social-media-numbers">
                       <!-- RT / Replies / Likes -->
                       <p class="col-4">50 <img height="15px" src="https://www.flaticon.com/svg/static/icons/svg/1388/1388895.svg"/></p>
                       <p class="col-4">20 <img height="15px" src="https://www.flaticon.com/svg/static/icons/svg/2462/2462719.svg"/></p>
@@ -86,10 +88,13 @@
         <div class="col-md-4">
           <div class="card mb-4 box-shadow">
 
-            <!-- Card title (C9)-->
-            <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1297597754928177152/LhF3izar_400x400.jpg" width="50" height="50" alt="c9 logo"/>
-            <span><b>Cloud9</b></span>
-            <span><em>@Cloud9</em></span>
+            
+              <!-- Card title (C9)-->
+            <div id="teamHeader">
+              <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1297597754928177152/LhF3izar_400x400.jpg" width="50" height="50" alt="c9 logo"/>
+              <span><b>Cloud9</b></span>
+              <span><em>@Cloud9</em></span>
+            </div>
             
             <a href="https://twitter.com/Cloud9/status/1307040052137078785" target="_blank">
               <img class="card-img-top" src="https://pbs.twimg.com/media/EiOJ9e7WoAMHkd4.png" alt="1 million followers">
@@ -97,7 +102,7 @@
 
             <div class="card-body">
               <p class="card-text">7 digits. Thank you everyone who tagged along on this journey - here's to the next million 🥂</p>
-              <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex justify-content-between align-items-center social-media-numbers">
                 <p class="col-4">503 <img height="15px" src="https://www.flaticon.com/svg/static/icons/svg/1388/1388895.svg"/></p>
                 <p class="col-4">202 <img height="15px" src="https://www.flaticon.com/svg/static/icons/svg/2462/2462719.svg"/></p>
                 <p class="col-4">30K <img height="15px" src="https://www.flaticon.com/svg/static/icons/svg/1077/1077035.svg"/></p>   
@@ -109,9 +114,11 @@
           <div class="card mb-4 box-shadow">
 
             <!-- Card title (TSM)-->
-            <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1302792489858932736/akxQwslQ_400x400.jpg" width="50" height="50" alt="tsm logo"/>
-            <span><b>TSM</b></span>
-            <span><em>@TSM</em></span>
+            <div id="teamHeader">
+              <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1302792489858932736/akxQwslQ_400x400.jpg" width="50" height="50" alt="tsm logo"/>
+              <span><b>TSM</b></span>
+              <span><em>@TSM</em></span>
+            </div>
 
             <a href="https://twitter.com/TSM/status/1306754721865179137" target="_blank">
               <img class="card-img-top" src="https://pbs.twimg.com/media/EiKArHKXYAIoNYW?format=jpg&name=small" alt="tsm lol champions">
@@ -119,7 +126,7 @@
 
             <div class="card-body">
               <p class="card-text">TSM Legends S6E25. Premiering tomorrow, 10AM PT. 𝐁𝐞 𝐭𝐡𝐞𝐫𝐞 ➝ http://youtube.com/tsm</p>
-              <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex justify-content-between align-items-center social-media-numbers">
                 <p class="col-4">503 <img height="15px" src="https://www.flaticon.com/svg/static/icons/svg/1388/1388895.svg"/></p>
                 <p class="col-4">202 <img height="15px" src="https://www.flaticon.com/svg/static/icons/svg/2462/2462719.svg"/></p>
                 <p class="col-4">30K <img height="15px" src="https://www.flaticon.com/svg/static/icons/svg/1077/1077035.svg"/></p>   
@@ -134,16 +141,18 @@
               <div class="card mb-4 box-shadow">
 
                 <!-- Card title (FaZe)-->
-                <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1300439016240807937/dOyOHCJG_400x400.jpg" width="50" height="50" alt="faze logo"/>
-                <span><b>FaZe Clan</b></span>
-                <span><em>@FaZeClan</em></span>
+                <div id="teamHeader">
+                  <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1300439016240807937/dOyOHCJG_400x400.jpg" width="50" height="50" alt="faze logo"/>
+                  <span><b>FaZe Clan</b></span>
+                  <span><em>@FaZeClan</em></span>
+                </div>
 
                 <a href="https://twitter.com/FaZeClan/status/1302017409486909441" target="_blank">
                  <img class="card-img-top" src="https://pbs.twimg.com/media/EhGxlXTWsAIHpbd.jpg" alt="how to join faze">
                 </a>
                 <div class="card-body">
                   <p class="card-text">Do YOU want to join FaZe Clan? The official #FAZE5 Recruitment Challenge in partnership with @GFuelEnergy & @NissanUSA is now OPEN. Hit the link below for all the details... and good luck! https://youtu.be/7lh_E1ohGNQ</p>
-                  <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex justify-content-between align-items-center social-media-numbers">
                     <p class="col-4">503 <img height="15px" src="https://www.flaticon.com/svg/static/icons/svg/1388/1388895.svg"/></p>
                     <p class="col-4">202 <img height="15px" src="https://www.flaticon.com/svg/static/icons/svg/2462/2462719.svg"/></p>
                     <p class="col-4">30K <img height="15px" src="https://www.flaticon.com/svg/static/icons/svg/1077/1077035.svg"/></p>   
@@ -155,16 +164,18 @@
               <div class="card mb-4 box-shadow">
 
                   <!-- Card title (100T)-->
+                  <div id="teamHeader">
                   <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1272669986213867520/uzSUn-6B_400x400.jpg" width="50" height="50" alt="100t logo"/>
                   <span><b>100 Thieves</b></span>
                   <span><em>@100Thieves</em></span>
+                  </div>
 
                   <a href="https://twitter.com/100Thieves/status/1301954594558210048" target="_blank">
                     <img class="card-img-top" src="https://pbs.twimg.com/media/EhF1N0-VgAELjIg?format=jpg&name=large" alt="Card image cap">
                   </a>
                 <div class="card-body">
                   <p class="card-text">Announcing the newest addition to our VALORANT roster: Steel. @JoshNissan is an incredibly skilled & talented player from the Counter-Strike scene. We’re so excited to start a new chapter of his competitive career with him in VALORANT. Welcome to 100 Thieves! #100T</p>
-                  <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex justify-content-between align-items-center social-media-numbers">
                     <p class="col-4">503 <img height="15px" src="https://www.flaticon.com/svg/static/icons/svg/1388/1388895.svg"/></p>
                     <p class="col-4">202 <img height="15px" src="https://www.flaticon.com/svg/static/icons/svg/2462/2462719.svg"/></p>
                     <p class="col-4">30K <img height="15px" src="https://www.flaticon.com/svg/static/icons/svg/1077/1077035.svg"/></p>   
@@ -176,16 +187,21 @@
               <div class="card mb-4 box-shadow">
 
                   <!-- Card title (TL)-->
+                  <a href="https://twitter.com/TeamLiquid/" target="_blank">
+                  <div id="teamHeader">
                   <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1286790391635861504/EVrH66Hc_400x400.jpg" width="50" height="50" alt="tl logo"/>
                   <span><b>Team Liquid</b></span>
-                  <span><em>@Team Liquid</em></span>
+                  <span><em>@TeamLiquid</em></span>
+                  </div>
+                  </a>
+
 
                   <a href="https://twitter.com/TeamLiquid/status/1306669547680706560" target="_blank">
-                    <img class="card-img-top" src="https://pbs.twimg.com/media/EiIt7x_U4AArfbZ?format=jpg&name=large" alt="tl merch">
+                    <img class="card-img-top" src="https://pbs.twimg.com/media/EiOkNmrXcAEfV2I?format=jpg&name=large" alt="tl merch">
                   </a>
                 <div class="card-body">
-                  <p class="card-text">Back and better than ever. The Liquid x Spider-Man Revamp is live! http://TL.GG/Store</p>
-                  <div class="d-flex justify-content-between align-items-center">
+                  <p class="card-text">Technology, beauty, and recycling ahead. Read up on the launch of our @Alienware Training Facility EU here:https://tl.gg/awtf-eu</p>
+                  <div class="d-flex justify-content-between align-items-center social-media-numbers">
                     <p class="col-4">503 <img height="15px" src="https://www.flaticon.com/svg/static/icons/svg/1388/1388895.svg"/></p>
                     <p class="col-4">202 <img height="15px" src="https://www.flaticon.com/svg/static/icons/svg/2462/2462719.svg"/></p>
                     <p class="col-4">30K <img height="15px" src="https://www.flaticon.com/svg/static/icons/svg/1077/1077035.svg"/></p> 
@@ -198,8 +214,8 @@
 
     <!--Tabular Data-->
     <!-- https://spreadsheets.google.com/feeds/cells/1oEmkhJKnkYR_XYyVOgAZLiBb2w8xnCivv4I1SEPeFYI/1/public/full?alt=json -->
-    <h2 class="text-center">All Twitter Data</h2>
-    <div class="container" id="twitter-data">
+    <div class="container my-5" id="twitter-data">
+      <h2 class="text-center">All Twitter Data</h2>
         <div class="table-responsive">
             <table class="table table-striped table-sm">
               <thead>
@@ -323,7 +339,51 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/table.js"></script>
 
-    <!-- https://www.chartjs.org/docs/latest/ -->
+<!-- https://www.chartjs.org/docs/latest/ -->
+<script src="js/Chart.js"></script>
+<script>
+  var imgC9 = document.createElement("img");
+  imgC9.src = "https://pbs.twimg.com/profile_images/1297597754928177152/LhF3izar_400x400.jpg";
+  imgC9.width = 50;
+  imgC9.height = 50;
+
+  var ctx = document.getElementById("comparison");
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ["C9", "TSM", "TL", "FaZe"],
+      datasets: [
+        {
+          data: [5000, 4000, 3000, 2000],
+          lineTension: 0,
+          backgroundColor: '#1da1f2',
+          borderColor: '#1B5299',
+          borderWidth: 1,
+          pointBackgroundColor: 'white',
+          fontColor:'white'
+        },
+
+      ] //dataset
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      },
+      legend: {
+        display: false,
+        position: "right",
+      }
+    }
+  });
+
+</script>
+
+<!-- https://www.chartjs.org/docs/latest/ -->
+    <!-- 
     <script src="js/Chart.js"></script>
     <script>
       var ctx = document.getElementById("timeline");
@@ -388,39 +448,53 @@
       });
     </script>
 
-<script src="js/Chart.js"></script>
-<script>
-  var ctx = document.getElementById("comparison");
-  var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ["C9", "TSM", "FQ", "FaZe"],
-      datasets: [
-        {
-          data: [3, 5, 5, 2],
-          lineTension: 0,
-          backgroundColor: 'blue',
-          borderColor: '#blue',
-          borderWidth: 4,
-          pointBackgroundColor: '#007cba'
-        },
+-->
 
-      ] //dataset
-    },
-    options: {
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: false
-          }
-        }]
-      },
-      legend: {
-        display: false,
-        position: "right",
-      }
-    }
-  });
-</script>
+<!-- Footer -->
+<footer class="page-footer font-small special-color-dark pt-4">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!-- Social buttons -->
+    <ul class="list-unstyled list-inline text-center">
+      <li class="list-inline-item">
+        <a class="btn-floating btn-fb mx-1">
+          <i class="fab fa-facebook-f"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-tw mx-1">
+          <i class="fab fa-twitter"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-gplus mx-1">
+          <i class="fab fa-google-plus-g"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-li mx-1">
+          <i class="fab fa-linkedin-in"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-dribbble mx-1">
+          <i class="fab fa-dribbble"> </i>
+        </a>
+      </li>
+    </ul>
+    <!-- Social buttons -->
+
+  </div>
+  <!-- Footer Elements -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright: Nabil Pervez
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
 </body>
-</html>

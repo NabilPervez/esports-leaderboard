@@ -1,0 +1,87 @@
+$black: #14171A;
+$dark-gray: #657786;
+$light-gray: #AAB8C2;
+$dark-blue: #1B5299;
+$light-blue:  #1da1f2;
+
+
+.jumbotron{
+    background-color:$black;
+    h1{
+        color:white;
+    }
+}
+
+body{
+    background-color:$black;
+    //background-image: url("http://universe.leagueoflegends.com/images/trendingBackground_Wallpaper.png");
+    //background-repeat: repeat-y;
+    font-family: "Roboto";
+}
+
+h2{
+    color:white;
+}
+
+h5{
+    color:white; 
+}
+
+tr{
+    color:white;
+}
+
+#popular-tweets{
+    display:block;
+    background-color: $dark-blue;
+    border-radius: 25px;
+    padding: 20px;
+
+    .card{
+        display:block;
+        background-color: $black;
+        color:white;
+        border-radius: 25px;
+        padding: 20px;
+
+    }
+
+}
+
+#twitter-data{
+    display:block;
+    background-color: $dark-blue;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.table{
+    background-color:$black;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.canvas{
+    color:white;
+}
+
+.charts{
+    display:block;
+    background-color: $dark-blue;
+    border-radius: 25px;
+    padding: 20px;
+    color:white;
+}
+
+.social-media-numbers{
+    color:$dark-gray;
+    img{
+        filter: invert(100%);
+    }
+}
+
+footer{
+    background-color:$dark-blue;
+    color:white;
+    }
+}
