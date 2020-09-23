@@ -14,9 +14,11 @@ $light-blue:  #1da1f2;
 
 body{
     background-color:$black;
-    //background-image: url("http://universe.leagueoflegends.com/images/trendingBackground_Wallpaper.png");
-    //background-repeat: repeat-y;
     font-family: "Roboto";
+    color:white;
+    p{
+        color:white;
+    }
 }
 
 h2{
@@ -61,7 +63,16 @@ tr{
     padding: 20px;
 }
 
-.canvas{
+.weekly-summary{
+    background-color: $dark-blue;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+#bar-graph{
+    background-color:$black;
+    border-radius: 25px;
+    padding: 20px;
     color:white;
 }
 
@@ -84,4 +95,3 @@ footer{
     background-color:$dark-blue;
     color:white;
     }
-}

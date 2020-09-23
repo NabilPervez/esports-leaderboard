@@ -7,53 +7,58 @@
     
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
 
     <!-- Additional CSS -->
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" >
-    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <title>Esports Weekly Digest</title>
 </head>
 <body>
-    <header>
-      <!--Navbar-->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="#"><img src="http://nabilpervez.com/wp-content/uploads/2020/02/N.png" width=5%></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#weekly-summary">Weekly Summary</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#popular-tweets">Popular Tweets</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#twitter-data">All Data</a>
-              </li>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="author.html">Author</a>
-              </li>
-            </ul>
-        </div>
-        </nav>
+    <header>      
     </header>
 
+    <!-- Jumbotron header -->
     <div class="jumbotron" >
       <h1 class="text-center align-center"><br><br>Esports Weekly Digest</h1>
     </div>
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="#"><img src="http://nabilpervez.com/wp-content/uploads/2020/02/N.png" width=5%></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNeb" >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarNeb">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Esports Weekly</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="https://github.com/NabilPervez/" target="_blank">Github</a>
+            </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mailto:nabilpervezcoding@gmail.com">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
     <!--Graphs-->
     <div class="container my-5 charts" id="weekly-summary">
       <h2>Most Retweeted Teams</h2>
      <!--   <canvas class="chartjs-render-monitor col-6" id="timeline" width="300" height="100" style="display: width: 300px; height: 100px;"></canvas> -->
-        <canvas class="chartjs-render-monitor" id="comparison" width="300" height="100" style="display: width: 300px; height: 100px;"></canvas>
+      <canvas class="chartjs-render-monitor" id="comparison" width="300" height="100"></canvas>
     </div>
     
     <!--3 Cards With Highlight Numbers-->
@@ -68,7 +73,9 @@
             <div id="teamHeader">
             <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1297597754928177152/LhF3izar_400x400.jpg" width="50" height="50" alt="c9 logo"/>
             <span><b>Cloud9</b></span>
+            <a href="https://twitter.com/Cloud9/" target="_blank">
             <span><em>@Cloud9</em></span>
+            </a>
             </div>
 
             <a href="https://twitter.com/Cloud9/status/1306730939528040448" target="_blank">
@@ -93,7 +100,9 @@
             <div id="teamHeader">
               <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1297597754928177152/LhF3izar_400x400.jpg" width="50" height="50" alt="c9 logo"/>
               <span><b>Cloud9</b></span>
+              <a href="https://twitter.com/Cloud9/" target="_blank">
               <span><em>@Cloud9</em></span>
+              </a>
             </div>
             
             <a href="https://twitter.com/Cloud9/status/1307040052137078785" target="_blank">
@@ -117,7 +126,9 @@
             <div id="teamHeader">
               <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1302792489858932736/akxQwslQ_400x400.jpg" width="50" height="50" alt="tsm logo"/>
               <span><b>TSM</b></span>
+              <a href="https://twitter.com/TSM/" target="_blank">
               <span><em>@TSM</em></span>
+              </a>
             </div>
 
             <a href="https://twitter.com/TSM/status/1306754721865179137" target="_blank">
@@ -144,7 +155,9 @@
                 <div id="teamHeader">
                   <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1300439016240807937/dOyOHCJG_400x400.jpg" width="50" height="50" alt="faze logo"/>
                   <span><b>FaZe Clan</b></span>
+                  <a href="https://twitter.com/FaZeClan/" target="_blank">
                   <span><em>@FaZeClan</em></span>
+                  </a>
                 </div>
 
                 <a href="https://twitter.com/FaZeClan/status/1302017409486909441" target="_blank">
@@ -167,7 +180,9 @@
                   <div id="teamHeader">
                   <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1272669986213867520/uzSUn-6B_400x400.jpg" width="50" height="50" alt="100t logo"/>
                   <span><b>100 Thieves</b></span>
+                  <a href="https://twitter.com/100Thieves/" target="_blank">
                   <span><em>@100Thieves</em></span>
+                  </a>
                   </div>
 
                   <a href="https://twitter.com/100Thieves/status/1301954594558210048" target="_blank">
@@ -187,13 +202,13 @@
               <div class="card mb-4 box-shadow">
 
                   <!-- Card title (TL)-->
-                  <a href="https://twitter.com/TeamLiquid/" target="_blank">
                   <div id="teamHeader">
                   <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1286790391635861504/EVrH66Hc_400x400.jpg" width="50" height="50" alt="tl logo"/>
                   <span><b>Team Liquid</b></span>
-                  <span><em>@TeamLiquid</em></span>
-                  </div>
+                  <a href="https://twitter.com/TeamLiquid/" target="_blank">
+                    <span><em>@TeamLiquid</em></span>
                   </a>
+                  </div>
 
 
                   <a href="https://twitter.com/TeamLiquid/status/1306669547680706560" target="_blank">
@@ -241,42 +256,59 @@
                 <tr>
                   <td>1233142581963288600</td>
                   <td>2/27/2020 15:31</td>
-                  <td>Who wore it better https://t.co/6gZDKM1iKZ</td>
-                  <td>8618</td>
-                  <td>256</td>
-                  <td>TL</td>
+                  <td>"100 Thieves Numbers Collection 2.29.20. In-Store 10 AM PT. Online 12 PM PT. https://t.co/8q3ChCqYeK https://t.co/kMSytGNXCt"</td>
+                  <td>5403</td>
+                  <td>361</td>
+                  <td>100T</td>
                 </tr>
                 <tr>
-                  <td>1233142581963288600</td>
+                  <td>1231736206196695000</td>
                   <td>2/27/2020 15:31</td>
-                  <td>Who wore it better https://t.co/6gZDKM1iKZ</td>
-                  <td>8618</td>
-                  <td>256</td>
-                  <td>FQ</td>
+                  <td>"Atlanta's Champions. @ATLFaZe 🏆 #EZAF"</td>
+                  <td>5335</td>
+                  <td>469</td>
+                  <td>FaZe</td>
                 </tr>
                 <tr>
-                  <td>1233142581963288600</td>
+                  <td>1232045693243723800</td>
                   <td>2/27/2020 15:31</td>
-                  <td>Who wore it better https://t.co/6gZDKM1iKZ</td>
-                  <td>8618</td>
-                  <td>256</td>
-                  <td>FaZeClan</td>
-                </tr>
-                <tr>
-                  <td>1233142581963288600</td>
-                  <td>2/27/2020 15:31</td>
-                  <td>Who wore it better https://t.co/6gZDKM1iKZ</td>
-                  <td>8618</td>
-                  <td>256</td>
+                  <td>"📍Disneyland TSM Fortnite and friends are in town. https://t.co/Rb7WnKKHCQ"</td>
+                  <td>4598</td>
+                  <td>104</td>
                   <td>TSM</td>
                 </tr>
                 <tr>
-                  <td>1233142581963288600</td>
+                  <td>1233450464756293600</td>
                   <td>2/27/2020 15:31</td>
-                  <td>Who wore it better https://t.co/6gZDKM1iKZ</td>
-                  <td>8618</td>
-                  <td>256</td>
+                  <td>⚠ Special Announcement on February 30th ⚠</td>
+                  <td>2911</td>
+                  <td>145</td>
                   <td>C9</td>
+                </tr>
+                  <tr>
+                    <td>1233030438094037000</td>
+                    <td>2/27/2020 15:31</td>
+                    <td>Media day with our 𝑻𝒐𝒑 𝑺𝒆𝒄𝒓𝒆𝒕 new signing https://t.co/czklqncWvu</td>
+                    <td>1443</td>
+                    <td>91</td>
+                    <td>TL</td>
+                  </tr>
+                  <tr>
+                    <td>1233179782797353000</td>
+                    <td>2/27/2020 15:31</td>
+                    <td>@OvileeMay Thresh please never drop the uwu C9 plushie</td>
+                    <td>765</td>
+                    <td>6</td>
+                    <td>C9</td>
+                  </tr>
+                  <tr>
+                    <td>1233142581963288600</td>
+                    <td>2/27/2020 15:31</td>
+                    <td>Who wore it better https://t.co/6gZDKM1iKZ</td>
+                    <td>8618</td>
+                    <td>256</td>
+                    <td>FaZeClan</td>
+                  </tr>
                   <tr>
                     <td>1231972216352407600</td>
                     <td>2/24/2020 10:00</td>
@@ -289,43 +321,59 @@
                   <tr>
                     <td>1233142581963288600</td>
                     <td>2/27/2020 15:31</td>
-                    <td>Who wore it better https://t.co/6gZDKM1iKZ</td>
-                    <td>8618</td>
-                    <td>256</td>
-                    <td>TL</td>
+                    <td>"100 Thieves Numbers Collection 2.29.20. In-Store 10 AM PT. Online 12 PM PT. https://t.co/8q3ChCqYeK https://t.co/kMSytGNXCt"</td>
+                    <td>5403</td>
+                    <td>361</td>
+                    <td>100T</td>
                   </tr>
                   <tr>
-                    <td>1233142581963288600</td>
+                    <td>1231736206196695000</td>
                     <td>2/27/2020 15:31</td>
-                    <td>Who wore it better https://t.co/6gZDKM1iKZ</td>
-                    <td>8618</td>
-                    <td>256</td>
-                    <td>FQ</td>
+                    <td>"Atlanta's Champions. @ATLFaZe 🏆 #EZAF"</td>
+                    <td>5335</td>
+                    <td>469</td>
+                    <td>FaZe</td>
                   </tr>
                   <tr>
-                    <td>1233142581963288600</td>
+                    <td>1232045693243723800</td>
                     <td>2/27/2020 15:31</td>
-                    <td>Who wore it better https://t.co/6gZDKM1iKZ</td>
-                    <td>8618</td>
-                    <td>256</td>
-                    <td>FaZeClan</td>
-                  </tr>
-                  <tr>
-                    <td>1233142581963288600</td>
-                    <td>2/27/2020 15:31</td>
-                    <td>Who wore it better https://t.co/6gZDKM1iKZ</td>
-                    <td>8618</td>
-                    <td>256</td>
+                    <td>"📍Disneyland TSM Fortnite and friends are in town. https://t.co/Rb7WnKKHCQ"</td>
+                    <td>4598</td>
+                    <td>104</td>
                     <td>TSM</td>
                   </tr>
                   <tr>
-                    <td>1233142581963288600</td>
+                    <td>1233450464756293600</td>
                     <td>2/27/2020 15:31</td>
-                    <td>Who wore it better https://t.co/6gZDKM1iKZ</td>
-                    <td>8618</td>
-                    <td>256</td>
+                    <td>⚠ Special Announcement on February 30th ⚠</td>
+                    <td>2911</td>
+                    <td>145</td>
                     <td>C9</td>
-                </tr>
+                  </tr>
+                    <tr>
+                      <td>1233030438094037000</td>
+                      <td>2/27/2020 15:31</td>
+                      <td>Media day with our 𝑻𝒐𝒑 𝑺𝒆𝒄𝒓𝒆𝒕 new signing https://t.co/czklqncWvu</td>
+                      <td>1443</td>
+                      <td>91</td>
+                      <td>TL</td>
+                    </tr>
+                    <tr>
+                      <td>1233179782797353000</td>
+                      <td>2/27/2020 15:31</td>
+                      <td>@OvileeMay Thresh please never drop the uwu C9 plushie</td>
+                      <td>765</td>
+                      <td>6</td>
+                      <td>C9</td>
+                    </tr>
+                    <tr>
+                      <td>1233142581963288600</td>
+                      <td>2/27/2020 15:31</td>
+                      <td>Who wore it better https://t.co/6gZDKM1iKZ</td>
+                      <td>8618</td>
+                      <td>256</td>
+                      <td>FaZeClan</td>
+                    </tr>
               </tbody>
             </table>
           </div>
@@ -459,17 +507,17 @@
     <!-- Social buttons -->
     <ul class="list-unstyled list-inline text-center">
       <li class="list-inline-item">
-        <a class="btn-floating btn-tw mx-1">
+        <a target="_blank" href="https://twitter.com/nebtunefgc" class="btn-floating btn-tw mx-1">
           <img width="50" height="50" src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-twitter-1.png&r=0&g=0&b=0"/>
         </a>
       </li>
       <li class="list-inline-item">
-        <a class="btn-floating btn-li mx-1">
+        <a target="_blank" href="https://www.linkedin.com/in/perveznabil/" class="btn-floating btn-li mx-1">
           <img width="50" height="50" src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-linkedin-2.png&r=0&g=0&b=0"/>
         </a>
       </li>
       <li class="list-inline-item">
-        <a class="btn-floating btn-li mx-1">
+        <a target="_blank" href="https://github.com/NabilPervez/" class="btn-floating btn-li mx-1">
           <img width="50" height="50" src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-github-4.png&r=0&g=0&b=0"/>
         </a>
       </li>
@@ -483,3 +531,4 @@
 <!-- Footer -->
 
 </body>
+</html>

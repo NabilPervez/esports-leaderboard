@@ -5,7 +5,10 @@
 
 body {
   background-color: #14171A;
-  font-family: "Roboto"; }
+  font-family: "Roboto";
+  color: white; }
+  body p {
+    color: white; }
 
 h2 {
   color: white; }
@@ -39,7 +42,15 @@ tr {
   border-radius: 25px;
   padding: 20px; }
 
-.canvas {
+.weekly-summary {
+  background-color: #1B5299;
+  border-radius: 25px;
+  padding: 20px; }
+
+#bar-graph {
+  background-color: #14171A;
+  border-radius: 25px;
+  padding: 20px;
   color: white; }
 
 .charts {
@@ -57,5 +68,3 @@ tr {
 footer {
   background-color: #1B5299;
   color: white; }
-  footer #ft-follow {
-    display: inline-block; }
