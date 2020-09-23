@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
@@ -34,17 +33,17 @@
     
       <div class="collapse navbar-collapse" id="navbarNeb">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#weekly-summary">Weekly Summary</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#popular-tweets">Popular Tweets</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Esports Weekly</a>
+            <a class="nav-link" href="twitter-data">Twitter Data</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="https://github.com/NabilPervez/" target="_blank">Github</a>
+              <a class="nav-link" href="author.html">Author</a>
             </li>
           </li>
           <li class="nav-item">
@@ -385,6 +384,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
     <script src="js/table.js"></script>
 
 <!-- https://www.chartjs.org/docs/latest/ -->
@@ -429,74 +429,6 @@
   });
 
 </script>
-
-<!-- https://www.chartjs.org/docs/latest/ -->
-    <!-- 
-    <script src="js/Chart.js"></script>
-    <script>
-      var ctx = document.getElementById("timeline");
-      var myChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-          datasets: [
-            {
-              label: "C9",
-              data: [1, 5, 3, 4, 5, 2, 6],
-              lineTension: 0,
-              backgroundColor: 'transparent',
-              borderColor: '#007cba',
-              borderWidth: 4,
-              pointBackgroundColor: '#007cba'
-            },
-            {
-              label: "TSM",
-              data: [3, 3, 3, 3, 3, 3, 3],
-              lineTension: 0,
-              backgroundColor: 'transparent',
-              borderColor: 'black',
-              borderWidth: 4,
-              pointBackgroundColor: 'black'
-            },
-            {
-              label: "FQ",
-              data: [5, 4, 5, 4, 1, 2, 7],
-              lineTension: 0,
-              backgroundColor: 'transparent',
-              borderColor: 'green',
-              borderWidth: 4,
-              pointBackgroundColor: 'green'
-            }
-            ,
-            {
-              label: "FaZe",
-              data: [2, 4, 6, 8, 6, 4, 2],
-              lineTension: 0,
-              backgroundColor: 'transparent',
-              borderColor: 'red',
-              borderWidth: 4,
-              pointBackgroundColor: 'red'
-            }
-
-          ] //dataset
-        },
-        options: {
-          scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero: false
-              }
-            }]
-          },
-          legend: {
-            display: true,
-            position: "right",
-          }
-        }
-      });
-    </script>
-
--->
 
 <!-- Footer -->
 <footer class="page-footer font-small special-color-dark pt-4">
