@@ -4,3 +4,13 @@ body {
 
 .jumbotron {
   background-color: #1da1f2; }
+
+.featurette-image {
+  object-fit: cover;
+  object-position: 100% 0;
+  width: 500px;
+  height: 500px; }
+
+footer {
+  background-color: #1da1f2;
+  color: white; }
